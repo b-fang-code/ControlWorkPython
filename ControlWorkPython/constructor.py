@@ -1,5 +1,5 @@
 class Note:
-    # Конструктор, класса Note, для инициализации свойств каждой заметки
+    # Конструктор класса Note, для инициализации свойств каждой заметки
     def __init__(self, note_id, title, body, created_at, updated_at):
         self.note_id = note_id
         self.title = title
