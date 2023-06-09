@@ -26,7 +26,7 @@ class Notes:
 
             print('Заметки успешно загружены')
         except FileNotFoundError:
-            print('Файл с заметками не найден. Создан новый файл')
+            print('Файл с заметками не найден. Создан новый файл ')
 
     #  метод поиска заметки по её ID
     def find_note_by_id(self, note_id):
@@ -40,7 +40,7 @@ class Notes:
         data = [note.to_dict() for note in self.notes]
         with open(self.file_path, 'w') as file:
             json.dump(data, file, indent=4)
-        print('Заметки успешно сохранены')
+        print('Заметки успешно сохранены ')
 
     #  метод для добавления новой заметки
     def add_note(self, title, body):
@@ -66,7 +66,7 @@ class Notes:
         if note:
             note.body = new_body
             note.updated_at = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print('Тело заметки успешно изменено')
+            print('Тело заметки успешно изменено ')
         else:
             print('Заметка с указанным ID не найдена ')
 
